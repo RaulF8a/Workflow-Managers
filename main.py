@@ -71,6 +71,8 @@ def almacenarDatos (imagen):
     with open (nombreArchivo, "wb") as imagenDescarga:
         for chunk in peticionImagen:
             imagenDescarga.write (chunk)
+        
+    os.system ("start imagen.jpg")
 
 def crearFlow (schedule):
     # Agregamos la agenda como parametro a Flow.
@@ -84,4 +86,3 @@ def crearFlow (schedule):
 flow = crearFlow (scheduleData)
 # flow.visualize ()
 flow.run ()
-
